@@ -18,7 +18,6 @@ export const profile = {
 
 export const stats = [
   { label: "Years Learning", value: "3+" },
-  { label: "Projects Shipped", value: "10+" },
   { label: "CGPA", value: "8.95" },
   { label: "Internships", value: "2" },
 ];
