@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Sparkles } from "lucide-react";
 import profileAsset from "@/assets/profile.jpg.asset.json";
+import cvAsset from "@/assets/Sree_Mithra_CV.pdf.asset.json";
 import { profile } from "@/data/portfolio";
 import { SocialLinks } from "@/components/SocialLinks";
 import { useTypingEffect } from "@/hooks/use-typing";
