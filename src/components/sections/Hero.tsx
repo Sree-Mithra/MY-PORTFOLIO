@@ -48,8 +48,10 @@ export const Hero = () => {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <a
-              href="/Sree_Mithra_CV.pdf"
-              download
+              href={cvAsset.url}
+              download="Sree_Mithra_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline-glow"
             >
               <Download className="h-4 w-4" /> Download CV
