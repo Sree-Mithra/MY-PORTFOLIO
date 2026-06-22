@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Sparkles } from "lucide-react";
 import profileAsset from "@/assets/profile.jpg.asset.json";
+import cvAsset from "@/assets/Sree_Mithra_CV.pdf.asset.json";
 import { profile } from "@/data/portfolio";
 import { SocialLinks } from "@/components/SocialLinks";
 import { useTypingEffect } from "@/hooks/use-typing";
@@ -47,8 +48,10 @@ export const Hero = () => {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <a
-              href="/Sree_Mithra_CV.pdf"
-              download
+              href={cvAsset.url}
+              download="Sree_Mithra_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline-glow"
             >
               <Download className="h-4 w-4" /> Download CV
