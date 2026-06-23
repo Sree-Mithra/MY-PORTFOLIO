@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Sparkles } from "lucide-react";
-import profileAsset from "@/assets/profile.jpg.asset.json";
+import profileImg from "@/assets/profile.jpg";
 import cvAsset from "@/assets/Sree_Mithra_CV.pdf.asset.json";
 import { profile } from "@/data/portfolio";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -73,7 +73,7 @@ export const Hero = () => {
             <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary opacity-40 blur-2xl animate-glow-pulse" aria-hidden />
             <div className="relative glass rounded-[2rem] p-2 animate-float">
               <img
-                src={profileAsset.url}
+                src={profileImg}
                 alt={`Portrait of ${profile.name}`}
                 width={520}
                 height={620}
