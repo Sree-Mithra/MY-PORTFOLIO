@@ -73,7 +73,7 @@ export const Hero = () => {
             <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary opacity-40 blur-2xl animate-glow-pulse" aria-hidden />
             <div className="relative glass rounded-[2rem] p-2 animate-float">
               <img
-                src={profileAsset.url}
+                src={profileImg}
                 alt={`Portrait of ${profile.name}`}
                 width={520}
                 height={620}
