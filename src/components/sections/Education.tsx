@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
-import { education } from "@/data/portfolio";
+import { GraduationCap, Award, BadgeCheck, Users } from "lucide-react";
+import { education, certifications, achievements, leadership } from "@/data/portfolio";
 
 export const Education = () => {
   return (
@@ -32,7 +32,7 @@ export const Education = () => {
                 </span>
               </div>
               <div className="text-primary font-medium mt-1">{education.institute}</div>
-              <div className="text-muted-foreground mt-1">{education.graduation}</div>
+              <div className="text-muted-foreground mt-1">{education.duration}</div>
 
               <div className="mt-6">
                 <div className="text-sm font-mono uppercase tracking-widest text-muted-foreground mb-3">
@@ -49,6 +49,72 @@ export const Education = () => {
             </div>
           </div>
         </motion.div>
+
+        <div className="mt-8 grid lg:grid-cols-2 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+            className="glass-card p-7"
+          >
+            <div className="flex items-center gap-3 mb-5">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
+                <BadgeCheck className="h-5 w-5" />
+              </div>
+              <h3 className="text-xl font-semibold">Certifications</h3>
+            </div>
+            <ul className="space-y-3">
+              {certifications.map((c) => (
+                <li key={c.name} className="flex items-center justify-between gap-3 text-sm">
+                  <span className="text-foreground font-medium">{c.name}</span>
+                  <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">{c.issuer}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          <div className="space-y-6">
+            {achievements.map((a) => (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: 0.05 }}
+                className="glass-card p-7"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
+                    <Award className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-xl font-semibold">{a.title}</h3>
+                  <span className="ml-auto font-mono text-xs text-muted-foreground">{a.period}</span>
+                </div>
+                <div className="text-primary text-sm font-medium mb-1">{a.org}</div>
+                <p className="text-muted-foreground text-sm leading-relaxed">{a.description}</p>
+              </motion.div>
+            ))}
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="glass-card p-7"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
+                  <Users className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-semibold">{leadership.role}</h3>
+                <span className="ml-auto font-mono text-xs text-muted-foreground">{leadership.period}</span>
+              </div>
+              <div className="text-primary text-sm font-medium mb-1">{leadership.org}</div>
+              <p className="text-muted-foreground text-sm leading-relaxed">{leadership.description}</p>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
