@@ -8,7 +8,7 @@ import { useTypingEffect } from "@/hooks/use-typing";
 
 export const Hero = () => {
   const typed = useTypingEffect(
-    ["Frontend Developer.", "UI/UX Designer.", "Data Analyst.", "Problem Solver."],
+    ["Data Analyst.", "Frontend Developer.", "UI/UX Designer.", "Problem Solver."],
     70,
     1500
   );
